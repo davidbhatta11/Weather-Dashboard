@@ -2,7 +2,7 @@
 
 A web application that displays real-time weather information for any city in the world.
 
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 
 - Java
 - Spring Boot
@@ -16,11 +16,11 @@ A web application that displays real-time weather information for any city in th
 - Displays humidity percentage
 - Displays weather description and icon
 
-## 🚀 How to Run
+## 🏃🏼‍♂️ How to Run
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
+   git clone  https://github.com/davidbhatta11/Weather-Dashboard.git
 ```
 
 2. Add your API key in `src/main/resources/application.properties`
@@ -37,6 +37,7 @@ weather.api.url=https://api.openweathermap.org/data/2.5/weather
 
 [OpenWeatherMap API](https://openweathermap.org/api) — Free tier, 1000 calls/day
 
-## 📸 Screenshot
 
-![Weather-dashboard.jpeg](Weather-dashboard.jpeg)# Weather-Dashboard
+# Weather-Dashboard
+
+![Weather-dashboard.jpeg](Weather-dashboard.jpeg)

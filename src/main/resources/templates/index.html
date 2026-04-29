@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .weather-card {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌤️ Weather Dashboard</h1>
+
+<!-- Search Form -->
+<form action="/weather" method="post">
+    <input type="text" name="city" placeholder="Enter city name" required/>
+    <button type="submit">Search</button>
+</form>
+
+<!-- Error Message -->
+<p class="error" th:if="${error}" th:text="${error}"></p>
+
+<!-- Weather Results -->
+<div class="weather-card" th:if="${weather != null}">
+    <h2 th:text="${weather.city + ', ' + weather.country}"></h2>
+    <img th:src="'https://openweathermap.org/img/wn/' + ${weather.icon} + '@2x.png'" alt="weather icon"/>
+    <p th:text="'🌡️ Temperature: ' + ${weather.temperature} + '°C'"></p>
+    <p th:text="'🤔 Feels Like: ' + ${weather.feelsLike} + '°C'"></p>
+    <p th:text="'💧 Humidity: ' + ${weather.humidity} + '%'"></p>
+    <p th:text="'☁️ ' + ${weather.description}"></p>
+</div>
+
+</body>
+</html>
