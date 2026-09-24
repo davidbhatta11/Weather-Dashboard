@@ -25,7 +25,7 @@ A web application that displays real-time weather information for any city in th
 
 2. Add your API key in `src/main/resources/application.properties`
 ```properties
-weather.api.key=48bbbe03467cfdad57feeae7e5bf2484
+
 weather.api.url=https://api.openweathermap.org/data/2.5/weather
 ```
 
